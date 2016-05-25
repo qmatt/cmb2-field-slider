@@ -28,7 +28,7 @@ class OWN_Field_Slider {
 			'type'       => 'hidden',
 			'class'      => 'own-slider-field-value',
 			'readonly'   => 'readonly',
-			'data-start' => absint( $field_escaped_value ),
+			'data-start' => absint( $field->default() ),
 			'data-min'   => $field->min(),
 			'data-max'   => $field->max(),
 			'desc'       => '',
@@ -43,7 +43,7 @@ class OWN_Field_Slider {
 
 		wp_enqueue_script( 'cmb2_field_slider_js',  plugins_url( 'js/cmb2_field_slider.js', __FILE__ ), array( 'jquery', 'jquery-ui-slider' ), self::VERSION );
 
-		wp_register_style( 'slider_ui', 'http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css', array(), '1.0' );
+		wp_register_style( 'slider_ui', '//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css', array(), '1.0' );
 		wp_enqueue_style( 'cmb2_field_slider_css', plugins_url( 'css/cmb2_field_slider.css', __FILE__ ), array( 'slider_ui' ), self::VERSION );
 
 	}
