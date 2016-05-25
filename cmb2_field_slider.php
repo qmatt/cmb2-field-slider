@@ -28,7 +28,7 @@ class OWN_Field_Slider {
 			'type'       => 'hidden',
 			'class'      => 'own-slider-field-value',
 			'readonly'   => 'readonly',
-			'data-start' => absint( $field_escaped_value ),
+			'data-start' => absint( $field->default() ),
 			'data-min'   => $field->min(),
 			'data-max'   => $field->max(),
 			'desc'       => '',
